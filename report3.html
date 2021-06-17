@@ -91,10 +91,10 @@
         var mat0 = new THREE.MeshLambertMaterial({transparent: true});
         mat0.map = texture0;
 
-        // 木0を作成(原点に作成)
+        // ベンチを作成(原点に作成)
         var geometry = new THREE.PlaneGeometry(75, 100);
-        var tree0 = new THREE.Mesh(geometry, mat0);
-        scene.add(0);
+        var bench = new THREE.Mesh(geometry, mat0);
+        scene.add(bench);
 
 
         tick();
