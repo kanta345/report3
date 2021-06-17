@@ -84,6 +84,18 @@
         tree3.position.set(0, 0, 200);
         tree2.rotation.set(0,1.7,0);
         scene.add(tree3);
+        
+          // ベンチテクスチャー読み込み
+        var textureLoader = new THREE.TextureLoader();  
+        var texture0 = textureLoader.load("bench.jpeg");
+        var mat0 = new THREE.MeshLambertMaterial({transparent: true});
+        mat0.map = texture0;
+
+        // 木0を作成(原点に作成)
+        var geometry = new THREE.PlaneGeometry(75, 100);
+        var tree0 = new THREE.Mesh(geometry, mat0);
+        scene.add(0);
+
 
         tick();
         // 毎フレーム時に実行されるループイベントです
