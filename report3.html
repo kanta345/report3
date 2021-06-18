@@ -31,19 +31,33 @@
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
         
-        // テクスチャー読み込み
+        // 噴水テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("img/hunnsui.jpg");
+        var texture0 = textureLoader.load("img/hunnsui.jpg");
         var mat = new THREE.MeshPhongMaterial();
-        mat.map = texture;
+        mat.map = texture0;
 
-        // 箱を作成
+        // 正四面体を作成
         var geometry = new THREE.TetrahedronGeometry(1, 1, 1);
         //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
         //var tetrahedron = new THREE.Mesh(geometry, material);
          var tetrahedron = new THREE.Mesh(geometry, mat);
         box.position.z = -5;
         scene.add(tetrahedron);
+        
+         // 砂場テクスチャー読み込み
+        var textureLoader = new THREE.TextureLoader();  
+        var texture1 = textureLoader.load("img/sunaba.jpg");
+        var mat = new THREE.MeshPhongMaterial();
+        mat.map = texture1;
+
+        // 平面を作成
+        var geometry = new THREE.PlaneGeometry(1, 1, 1);
+        //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
+        //var plane = new THREE.Mesh(geometry, material);
+         var plane = new THREE.Mesh(geometry, mat);
+        box.position.z = -5;
+        scene.add(plane);
   
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
