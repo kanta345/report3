@@ -18,7 +18,7 @@
         });
         renderer.setSize(width, height);
         // 背景の色を設定
-        renderer.setClearColor(0xeeee);
+        renderer.setClearColor(0xeeee00);
 
         // シーンを作成
         const scene = new THREE.Scene();
@@ -39,7 +39,6 @@
 
         // 正四面体を作成
         var geometry = new THREE.TetrahedronGeometry(1, 1, 1);
-        //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
         //var tetrahedron = new THREE.Mesh(geometry, material);
          var tetrahedron = new THREE.Mesh(geometry, mat);
         box.position.z = -5;
@@ -53,7 +52,6 @@
 
         // 平面を作成
         var geometry = new THREE.PlaneGeometry(1, 1, 1);
-        //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
         //var plane = new THREE.Mesh(geometry, material);
          var plane = new THREE.Mesh(geometry, mat);
         box.position.z = -5;
