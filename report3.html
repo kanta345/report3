@@ -74,38 +74,6 @@
         otona.rotation.set(0,1.7,0);
         scene.add(otona);
         
-        // テクスチャー読み込み
-        var textureLoader = new THREE.TextureLoader();  
-        var texture3= textureLoader.load("reportimg/isi.jpg");
-        var mat = new THREE.MeshPhongMaterial();
-        mat.map = texture3;
-  
-        // バンプマップ読み込み
-        var bump = textureLoader.load("reportimg/isi.jpg");
-        mat.bumpMap = bump;
-        mat.bumpscale = 0.2;
-
-        // 箱を作成
-        var geometry = new THREE.BoxGeometry(1, 1, 1);
-        //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
-        //var box = new THREE.Mesh(geometry, material);
-        var box = new THREE.Mesh(geometry, mat);
-        box.position.z = -5;
-        scene.add(box);
-        
-         // 初回実行
-        var update = function() {
-          requestAnimationFrame(update);
-
-          // 箱を回転させる
-          box.rotation.x += 0.01;
-          box.rotation.y += 0.01;
-          
-           renderer.render(scene, camera);
-            };
-        update();
-        }
-        
         tick();
         // 毎フレーム時に実行されるループイベントです
         function tick() {
