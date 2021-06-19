@@ -110,6 +110,17 @@
      tree3.position.set(0, 3, 20);
      tree2.rotation.set(0,1.7,0);
      scene.add(tree3);
+    
+    // 子供を作成 
+    var texture4 = textureLoader.load("img/kodomo.png");
+    const kodomo = new THREE.SpriteMaterial({ map: texture4,});
+    
+    const sprite1 = new THREE.Sprite(kodomo);
+    sprite1.position.x = -14;
+    sprite1.position.y = -5;
+    sprite1.position.z = 15;
+    sprite1.scale.set(6,5,5);
+    scene.add(sprite1);
   
     // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
