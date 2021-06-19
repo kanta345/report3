@@ -74,7 +74,7 @@
       mat0.map = texture0;
 
       // 木0を作成(原点に作成)
-      var geometry = new THREE.PlaneGeometry(5, 3);
+      var geometry = new THREE.PlaneGeometry(8, 5);
       var tree0 = new THREE.Mesh(geometry, mat0);
       tree0.position.set(0,2,-20)
       scene.add(tree0);
@@ -117,7 +117,7 @@
     
     const sprite1 = new THREE.Sprite(kodomo);
     sprite1.position.x = -14;
-    sprite1.position.y = 2;
+    sprite1.position.y = 3;
     sprite1.position.z = 15;
     sprite1.scale.set(6,5,5);
     scene.add(sprite1);
