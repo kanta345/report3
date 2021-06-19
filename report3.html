@@ -50,11 +50,10 @@
     mat.bumpscale = 0.5;
         
     // 正四面体を作成
-    var geometry = new THREE.TetrahedronGeometry(1, 1, 1);
+    var geometry = new THREE.TetrahedronGeometry(10,10,10);
     //var tetrahedron = new THREE.Mesh(geometry, material);
     var tetrahedron = new THREE.Mesh(geometry, mat);
     tetrahedron.position.z = -5;
-    tetrahedron.scale = 20;
     scene.add(tetrahedron);
         
     // テクスチャー読み込み2
