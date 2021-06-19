@@ -24,7 +24,7 @@
     renderer.setSize(width, height);
     document.body.appendChild(renderer.domElement);
     // 背景の色を設定
-    renderer.setClearColor(0x87CEFA);
+    renderer.setClearColor(0xeeee00);
   
     // シーンを作成
     var scene = new THREE.Scene();
@@ -64,7 +64,7 @@
     var planeGeometry = new THREE.PlaneGeometry(50,50,50,50);
     var plane = new THREE.Mesh(planeGeometry,mat2);
     plane.rotation.set( -Math.PI/2, 0, 0 );
-    plane.position.set(0,,0);
+    plane.position.set(0,0,0);
     scene.add( plane );
     
       // 木0テクスチャー読み込み
