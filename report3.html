@@ -144,12 +144,12 @@
     var texture5 = textureLoader.load("img/gim.pjpg");
     const gim = new THREE.SpriteMaterial({ map: texture5,});
     
-    const sprite1 = new THREE.Sprite(gim);
+    const sprite2 = new THREE.Sprite(gim);
     sprite1.position.x = 14;
     sprite1.position.y = 3;
     sprite1.position.z = 15;
     sprite1.scale.set(6,5,5);
-    scene.add(sprite1);
+    scene.add(sprite2);
   
     // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
