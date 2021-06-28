@@ -49,7 +49,7 @@
     mat.bumpscale = 0.5;
         
     // 噴水の周りの形を作成
-    var geometry = new THREE.TorusGeometry(2.8,2.8,2.8);
+    var geometry = new THREE.TorusGeometry(3,3,3);
     //var tetrahedron = new THREE.Mesh(geometry, material);
     var torus = new THREE.Mesh(geometry, mat);
     torus.rotation.set( -Math.PI/2, 0, 0 );
@@ -68,7 +68,7 @@
     mat.bumpscale = 0.5;
         
     // 噴水の形を作成
-    var geometry = new THREE.TetrahedronGeometry(3,3,3);
+    var geometry = new THREE.TetrahedronGeometry(3.5,3.5,3.5);
     //var tetrahedron = new THREE.Mesh(geometry, material);
     var tetrahedron = new THREE.Mesh(geometry, mat);
     scene.add(tetrahedron);
