@@ -141,13 +141,13 @@
     scene.add(sprite1);
     
     // ジャングルジムを作成 
-    var texture5 = textureLoader.load("img/gim.pjpg");
+    var texture5 = textureLoader.load("img/gim.jpg");
     const gim = new THREE.SpriteMaterial({ map: texture5,});
     
     const sprite2 = new THREE.Sprite(gim);
     sprite1.position.x = 14;
     sprite1.position.y = 3;
-    sprite1.position.z = 15;
+    sprite1.position.z = -15;
     sprite1.scale.set(6,5,5);
     scene.add(sprite2);
   
