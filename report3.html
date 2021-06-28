@@ -36,6 +36,23 @@
     
     // カメラコントローラーを作成
     const controls = new THREE.OrbitControls(camera,document.body);
+    
+     // 砂岩テクスチャー読み込み
+    var textureLoader = new THREE.TextureLoader();  
+    var texture = textureLoader.load("img/sagann.jpg");
+    var mat = new THREE.MeshPhongMaterial();
+    mat.map = texture;
+
+    // バンプマップ読み込み
+    var bump = textureLoader.load("immg/sagann.jpg");
+    mat.bumpMap = bump;
+    mat.bumpscale = 0.5;
+        
+    // 噴水の周りの形を作成
+    var geometry = new THREE.TorusGeometry(5,5,5);
+    //var tetrahedron = new THREE.Mesh(geometry, material);
+    var torus = new THREE.Mesh(geometry, mat);
+    scene.add(torus);
 
         
     // 噴水テクスチャー読み込み
