@@ -52,6 +52,7 @@
     var geometry = new THREE.TorusGeometry(5,5,5);
     //var tetrahedron = new THREE.Mesh(geometry, material);
     var torus = new THREE.Mesh(geometry, mat);
+    torus.rotation.set( -Math.PI/2, 0, 0 );
     scene.add(torus);
 
         
